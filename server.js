@@ -1,3 +1,4 @@
+require("dotenv").config()
 const express = require('express')
 const server = express()
 const cors = require('cors')
@@ -15,5 +16,5 @@ server.use(cors(corsOptions))
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use(logger)
-server.use(routers)
+server.use('',routers)
 module.exports = server
