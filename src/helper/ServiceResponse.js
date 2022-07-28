@@ -1,11 +1,11 @@
-const ServiceResponse = (data, status, message = 'success', error = null ) =>{
+const ServiceResponse = (res,data, status, message = 'success', error = null ) =>{
     
   const resultPrint = {}
     resultPrint.message = message
     resultPrint.status = status
     resultPrint.data = data
     resultPrint.error = error
-    return resultPrint
+    return res.status(status).json(resultPrint)
   }
   
   module.exports = ServiceResponse;
