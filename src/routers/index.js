@@ -1,11 +1,11 @@
 const express = require("express")
 const mainRouter = express.Router()
-const book = require('./book');
+const booksRouter = require('./book');
 const user = require('./user');
 const productRouter = require("./productRouter")
 
 
-mainRouter.use('/book', book)
+mainRouter.use('/book', booksRouter)
 mainRouter.use('/user', user)
 mainRouter.use('/product', productRouter)
 
