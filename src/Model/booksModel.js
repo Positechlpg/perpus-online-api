@@ -1,4 +1,4 @@
-const {Sequelize} = require('Sequelize');
+const {Sequelize} = require('sequelize');
 const db = require('../config/db');
 
 const {DataTypes} = Sequelize;
@@ -13,7 +13,7 @@ const products = db.define(
             primaryKey: true,
             notNull: true,
             autoIncrement: true,
-        }, 
+        },
         title:{
             type: DataTypes.STRING, // di database varchar()
         },
